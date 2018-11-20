@@ -12,13 +12,6 @@ const app = express();
 // Morgan
 app.use(morgan);
 
-// Compress
-app.use(compression({ filter: shouldCompress }));
-
-function shouldCompress(req, res) {
-  req.headers["x-no-compression"] ? false : compression.filter(req, res);
-}
-
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

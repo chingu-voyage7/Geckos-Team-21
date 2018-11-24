@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import homepage from "./components/Homepage";
+// Components
+import Homepage from "./components/Homepage";
+import Profile from "./components/profile/Profile";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <Route exact path="/" component={homepage} />
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/profile" component={Profile} />
         </div>
       </Router>
     );

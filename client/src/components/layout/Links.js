@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Links extends Component {
   // For demo
   state = {
-    isAuth: true // Change its value to false see the difference
+    isAuth: false // Change its value to false see the difference
   };
 
   render() {

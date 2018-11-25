@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
@@ -54,4 +55,108 @@ a {
   color: #003056;
   border-color: rgba(255, 255, 255, 0);
   background: white;
+}
+
+/* ==============
+      Links
+   ============*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background: #003056;
+  white-space: nowrap;
+}
+
+.header .link {
+  margin: 0 1rem;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  transition: color ease-in-out 0.3s;
+  white-space: nowrap;
+}
+
+.header .link:hover {
+  color: rgb(255, 223, 175);
+}
+
+/* ==============
+      Profile
+   ============*/
+#profile .container {
+  height: 100%;
+  padding: 2rem 7%;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+#profile .container .title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#profile .prof-body-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile .prof-body-id p:first-of-type {
+  margin: 1rem 0;
+}
+
+#profile .prof-body-id .prof-img {
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+#profile .prof-body-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+  margin-top: 3rem;
+}
+
+#profile .prof-body-description > div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ==============
+      Footer
+   ============*/
+#footer {
+  padding: 10px 0;
+  color: white;
+  background: #111;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+/* ===============
+      Not Found
+   ===============*/
+#not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#not-found p {
+  margin: 5rem 0;
+}
+
+/* =================
+      Medai Query
+   ==============*/
+@media screen and (max-width: 500px) {
+  #profile .prof-body-description {
+    grid-template-columns: 1fr;
+  }
+
+  #profile .prof-body-description > div:last-child {
+    margin-top: 2rem;
+  }
 }
